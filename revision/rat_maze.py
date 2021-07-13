@@ -34,6 +34,8 @@ def helper(A, n, i, j,ans,visited,FinalAns):
 
     
 def findPath(m, n):
+    if m[0][0] == 0:
+        return []
     visited = []
     for i in range(n):
         visited.append([])
@@ -43,6 +45,7 @@ def findPath(m, n):
     ans.sort()
     return ans
 
-
+# 1 means free block
+# 0 means obstacle
 a = findPath([[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],5)
 print(a)
