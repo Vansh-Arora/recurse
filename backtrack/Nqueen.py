@@ -4,10 +4,11 @@ def isSafe(A,N,r,c):
     for i in range(r):
         if A[i][c] == 1:
             return False
-    # cHECK IF ANY QUEEN IS PRESENT IN THIS ROW
+    '''# cHECK IF ANY QUEEN IS PRESENT IN THIS ROW
+    ## NOT REQUIRED
     for j in range(c):
         if A[r][j] == 1:
-            return False
+            return False'''
     # Check left diagonal
     i = r-1
     j = c-1
