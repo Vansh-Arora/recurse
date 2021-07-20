@@ -1,4 +1,13 @@
 count = 0
+
+def show(A):
+    n = len(A)
+    for i in range(n):
+        for j in range(n):
+            if A[i][j] == 0:    print("- ",end='')
+            else: print("Q ",end='')
+        print()
+    print('\n')
 def isSafe(A,N,r,c):
     # cHECK IF ANY QUEEN IS PRESENT IN THIS COLUMN
     for i in range(r):
@@ -30,6 +39,7 @@ def isSafe(A,N,r,c):
 def nQueen(A, N, r):
     global count
     if r == N:
+        show(A)
         count +=1
         return
     for c in range(N):
@@ -45,7 +55,7 @@ def createGrid(n):
         for j in range(n):
             grid[i].append(0)
     return grid
-A = createGrid(4)
-nQueen(A,4,0)
+A = createGrid(5)
+nQueen(A,5,0)
 print(count)
 
